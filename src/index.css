@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+VN:wght@100..400&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+
+h1, h2, h3 ,h4{
+    font-family: "Cormorant Infant", serif;
+}
+
+h2 {
+  @apply text-3xl font-semibold
+}
+
+i {
+  font-size: 50px;
+  padding: 10px;
+}
