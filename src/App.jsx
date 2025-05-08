@@ -68,10 +68,10 @@ function App() {
         </ul>
         <br />
         <h2 class="pb-2">Projetos</h2>
-        <article class="grid grid-cols-2 gap-3">
+        <div class="grid grid-cols-2 gap-3">
           <Projetos nameproject={"Alfabeto HTML"} link={"https://hellencristinap.github.io/Alfabeto-em-HTML/"} linkRepo={"https://hellencristinap.github.io/Alfabeto-em-HTML/"} icon={"fab fa-html5"}/>
           <Projetos nameproject={"Impar ou par"} link={"https://hellencristinap.github.io/numeros/"} linkRepo={"https://github.com/HellenCristinaP/numeros"} icon={"fab fa-js"}/>
-        </article>
+        </div>
       </header>
     </div>
   )
