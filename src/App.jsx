@@ -68,7 +68,9 @@ function App() {
 
         </ul>
         <br />
-        <h2 class="pb-2">Projetos</h2>
+        <p class="pb-3">Estou atrás de oportunidades, quer saber mais? Baixe meu curriculo.</p>
+        <a href="./Currículo/Curriculo_Hellen.Cristina.pdf" download="Currículo.pdf" class="border-2 border-purple-900 rounded-sm px-2 py-0.5 bg-purple-900 hover:bg-[#08020C] transition duration-300 cursor-pointer active:bg-purple-900 sm:mx-2 lg:px-2">Baixar Curriculo</a>
+        <h2 class="py-2">Projetos</h2>
         <article class="grid grid-cols-2 gap-3">
           <Projetos nameproject={"Alfabeto HTML"} link={"https://hellencristinap.github.io/Alfabeto/"} linkRepo={"https://github.com/HellenCristinaP/Alfabeto"} icon={"fab fa-html5"}/>
 
@@ -77,7 +79,6 @@ function App() {
         <footer class="text-center pt-5">
           <p class="text-sm font-light pt-3 mb-2">Minhas redes sociais</p>
           <a href="https:www.linkedin.com/in/hellen-cristina-araújo-da-silva"><i class="fab fa-linkedin"></i></a>
-          <a href="https://www.instagram.com/hellen.cris.001/"><i class="fab fa-instagram"></i></a>
           <a href="https://github.com/HellenCristinaP"><i class="fab fa-github"></i></a>        
         </footer>
     </div>
