@@ -26,6 +26,7 @@ function App() {
         <h3 class="text-2xl lg:text-3xl">{subjects}</h3>
         <p>Estou cursando {subjects}, na {colegy} no 3º semestre da faculdade.</p>
         <br />
+      </header>
         <h2>Habilidades</h2>
         <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2">
           <li>HTML
@@ -69,11 +70,16 @@ function App() {
         <br />
         <h2 class="pb-2">Projetos</h2>
         <article class="grid grid-cols-2 gap-3">
-          <Projetos nameproject={"Alfabeto HTML"} link={"https://hellencristinap.github.io/Alfabeto-em-HTML/"} linkRepo={"https://hellencristinap.github.io/Alfabeto-em-HTML/"} icon={"fab fa-html5"}/>
+          <Projetos nameproject={"Alfabeto HTML"} link={"https://hellencristinap.github.io/Alfabeto/"} linkRepo={"https://github.com/HellenCristinaP/Alfabeto"} icon={"fab fa-html5"}/>
 
           <Projetos nameproject={"Impar ou par"} image="../img/imparoupar.png" link={"https://hellencristinap.github.io/numeros/"} linkRepo={"https://github.com/HellenCristinaP/numeros"} icon={"fab fa-js"}/>
         </article>
-      </header>
+        <footer class="text-center pt-5">
+        <p class="text-sm font-light pt-3">Minhas redes sociais</p>
+            <a href="https:www.linkedin.com/in/hellen-cristina-araújo-da-silva"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/hellen.cris.001/"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/HellenCristinaP"><i class="fab fa-github"></i></a>        
+        </footer>
     </div>
   )
 }

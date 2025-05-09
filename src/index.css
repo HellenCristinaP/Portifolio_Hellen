@@ -14,3 +14,12 @@ i {
   font-size: 50px;
   padding: 10px;
 }
+
+footer{
+  
+  
+  i {
+    @apply text-3xl hover:text-4xl transition-all
+    duration-300 ease-in-out;
+  }
+}
