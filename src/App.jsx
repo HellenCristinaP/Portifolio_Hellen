@@ -75,10 +75,10 @@ function App() {
           <Projetos nameproject={"Impar ou par"} image="../img/imparoupar.png" link={"https://hellencristinap.github.io/numeros/"} linkRepo={"https://github.com/HellenCristinaP/numeros"} icon={"fab fa-js"}/>
         </article>
         <footer class="text-center pt-5">
-        <p class="text-sm font-light pt-3">Minhas redes sociais</p>
-            <a href="https:www.linkedin.com/in/hellen-cristina-araújo-da-silva"><i class="fab fa-linkedin"></i></a>
-            <a href="https://www.instagram.com/hellen.cris.001/"><i class="fab fa-instagram"></i></a>
-            <a href="https://github.com/HellenCristinaP"><i class="fab fa-github"></i></a>        
+          <p class="text-sm font-light pt-3 mb-2">Minhas redes sociais</p>
+          <a href="https:www.linkedin.com/in/hellen-cristina-araújo-da-silva"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/hellen.cris.001/"><i class="fab fa-instagram"></i></a>
+          <a href="https://github.com/HellenCristinaP"><i class="fab fa-github"></i></a>        
         </footer>
     </div>
   )
