@@ -10,10 +10,9 @@ function App() {
   const objective = "Desenvolvedora Front-end";
   const colegy = "UNIMES"
   const subjects = "Análise e Desenvolvimento de Sistemas";
-  let bgColor = "bg-white";
 
   return (
-    <div class="border-[2px] border-purple-600 rounded-2xl w-100 mx-auto my-5 px-3 py-4 sm:w-130 lg:w-220 lg:px-5">
+    <div class="border-1 border-purple-600 rounded-2xl w-95 mx-auto my-5 px-3 py-4 sm:w-130 lg:w-220 lg:px-5">
       <header class="py-2">
         <img src="../img/appiconG.png" alt="Foto minha" class="block float-right rounded-full h-20 sm:h-30 lg:h-50 lg:mx-3"/>
         <h1 class="text-4xl font-extrabold sm:text-5xl lg:text-6xl">{name}</h1>
@@ -68,8 +67,9 @@ function App() {
 
         </ul>
         <br />
-        <p class="pb-3">Estou atrás de oportunidades, quer saber mais? Baixe meu curriculo.</p>
-        <a href="./Currículo/Curriculo_Hellen.Cristina.pdf" download="Currículo.pdf" class="border-2 border-purple-900 rounded-sm px-2 py-0.5 bg-purple-900 hover:bg-[#08020C] transition duration-300 cursor-pointer active:bg-purple-900 sm:mx-2 lg:px-2">Baixar Curriculo</a>
+        <p class="pb-3"><strong>Estou em busca de oportunidades</strong>, quer saber mais? Baixe meu curriculo.</p>
+        <button class="cursor-pointer py-2 px-5 mx-2 bg-purple-800 text-[#f1f1f1]/50 rounded-3xl hover:text-[#f1f1f1] hover:bg-purple-800/70 transition font-semibold shadow-md sm:py-3">Baixar curriculo</button>
+
         <h2 class="py-2">Projetos</h2>
         <article class="grid grid-cols-2 gap-3">
           <Projetos nameproject={"Alfabeto HTML"} link={"https://hellencristinap.github.io/Alfabeto/"} linkRepo={"https://github.com/HellenCristinaP/Alfabeto"} icon={"fab fa-html5"}/>

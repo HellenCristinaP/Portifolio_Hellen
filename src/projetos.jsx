@@ -1,12 +1,17 @@
-function projetos({nameproject, image, link, linkRepo, icon}){
+function projetos({nameproject, link, linkRepo, icon}){
     return (
-    <div class="border-1 border-purple-800 rounded-sm p-2">
-        <h3 class="mx-2 text-2xl">{nameproject}</h3>
-        <i class={icon}></i>
-        <br />
-        <a href={link}><button class="my-1 border-2 border-purple-900 rounded-sm px-3 bg-purple-900 hover:bg-[#08020C] transition duration-300 cursor-pointer active:bg-purple-900 lg:px-2">Site</button></a>
-        <a href={linkRepo}><button class="my-1 border-2 border-purple-900 rounded-sm px-3 bg-purple-900 hover:bg-[#08020C] transition duration-300 cursor-pointer active:bg-purple-900 sm:mx-2 lg:px-2 ">Repositorio</button></a>
-    </div>
+<div class="flex flex-col justify-between h-full shadow-md border-1 border-purple-800 rounded-xl py-3 px-2">
+  <div>
+    <h3 class="mx-2 text-2xl">{nameproject}</h3>
+    <i class={icon}></i>
+  </div>
+
+  <div class="flex mt-4">
+    <a href={link} class="cursor-pointer py-2 px-2.5 bg-purple-800 text-[#f1f1f1]/50 rounded-3xl hover:text-[#f1f1f1] hover:bg-purple-800/70 transition font-semibold shadow-md sm:py-2 sm:px-5 sm:ml-2">Site</a>
+    <a href={linkRepo} class="cursor-pointer py-2 px-2.5 mx-2 bg-purple-800 text-[#f1f1f1]/50 rounded-3xl hover:text-[#f1f1f1] hover:bg-purple-800/70 transition font-semibold shadow-md sm:py-2 sm:px-5">Repositorio</a>
+  </div>
+</div>
+
     )
 }
 
