@@ -68,6 +68,8 @@ function App() {
 
         </ul>
         <br />
+        <p class="pb-3"><strong>Estou em busca de oportunidades</strong>, quer saber mais? Baixe meu curriculo.</p>
+        <a href="../curriculo/Curriculo_Hellen.Cristina.pdf" download="../curriculo/Curriculo_Hellen.Cristina.pdf" class="cursor-pointer py-2 px-5 mx-2 bg-purple-800 text-[#f1f1f1]/50 rounded-3xl hover:text-[#f1f1f1] hover:bg-purple-800/70 transition font-semibold shadow-md sm:py-3">Baixar curriculo</a>
         {/* <p class="pb-3 my-1"><strong>Estou em busca de oportunidades</strong>, quer saber mais? Baixe meu curriculo.</p>
         <a id="download" class="cursor-pointer py-2 px-5 mx-2 bg-purple-800 text-[#f1f1f1]/50 rounded-3xl hover:text-[#f1f1f1] hover:bg-purple-800/70 transition font-semibold shadow-md sm:py-3">Baixar curriculo</a> */}
 
