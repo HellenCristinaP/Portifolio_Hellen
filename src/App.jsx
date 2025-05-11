@@ -11,6 +11,7 @@ function App() {
   const colegy = "UNIMES"
   const subjects = "Análise e Desenvolvimento de Sistemas";
 
+
   return (
     <div class="border-1 border-purple-600 rounded-2xl w-95 mx-auto my-5 px-3 py-4 sm:w-130 lg:w-220 lg:px-5">
       <header class="py-2">
@@ -67,8 +68,8 @@ function App() {
 
         </ul>
         <br />
-        <p class="pb-3"><strong>Estou em busca de oportunidades</strong>, quer saber mais? Baixe meu curriculo.</p>
-        <a href="../curriculo/Curriculo_Hellen.Cristina.pdf" download="Curriculo_Hellen.Cristina.pdf" class="cursor-pointer py-2 px-5 mx-2 bg-purple-800 text-[#f1f1f1]/50 rounded-3xl hover:text-[#f1f1f1] hover:bg-purple-800/70 transition font-semibold shadow-md sm:py-3">Baixar curriculo</a>
+        {/* <p class="pb-3 my-1"><strong>Estou em busca de oportunidades</strong>, quer saber mais? Baixe meu curriculo.</p>
+        <a id="download" class="cursor-pointer py-2 px-5 mx-2 bg-purple-800 text-[#f1f1f1]/50 rounded-3xl hover:text-[#f1f1f1] hover:bg-purple-800/70 transition font-semibold shadow-md sm:py-3">Baixar curriculo</a> */}
 
         <h2 class="py-2">Projetos</h2>
         <article class="grid grid-cols-2 gap-3">
