@@ -11,13 +11,10 @@ h2 {
 }
 
 i {
-  font-size: 50px;
-  padding: 10px;
+  @apply text-5xl py-5 px-2
 }
 
 footer{
-  
-  
   i {
     @apply text-3xl hover:text-4xl transition-all
     duration-300 ease-in-out;
