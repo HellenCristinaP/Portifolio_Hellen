@@ -27,6 +27,7 @@ function App() {
         <p>Estou cursando {subjects}, na {colegy} no 3º semestre da faculdade.</p>
         <br />
       </header>
+      <main>
         <h2>Habilidades</h2>
         <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2">
           <li>HTML
@@ -68,9 +69,9 @@ function App() {
 
         </ul>
         <br />
-        <p class="pb-3"><strong>Estou em busca de oportunidades</strong>, quer saber mais? Baixe meu curriculo.</p>
-        <a href="./curriculo/Curriculo_Hellen.Cristina.pdf" download="./curriculo/Curriculo_Hellen.Cristina.pdf" class="cursor-pointer py-1 px-4 mx-2 bg-purple-800 text-[#f1f1f1]/50 rounded-3xl hover:text-[#f1f1f1] hover:bg-purple-800/70 transition font-semibold shadow-md sm:py-2.5">Baixar curriculo</a>
-
+          <p class="pb-3"><strong>Estou em busca de oportunidades</strong>, quer saber mais? Baixe meu curriculo.</p>
+          <a href="./curriculo/Curriculo_Hellen.Cristina.pdf" download="./curriculo/Curriculo_Hellen.Cristina.pdf" class="cursor-pointer py-1 px-4 mx-2 bg-purple-800 text-[#f1f1f1]/50 rounded-3xl hover:text-[#f1f1f1] hover:bg-purple-800/70 transition font-semibold shadow-md sm:py-2.5">Baixar curriculo</a>
+      </main>
         <h2 class="py-2">Projetos</h2>
         <article class="grid grid-cols-2 gap-3">
           <Projetos nameproject={"SlideShow em JS"} image={"src/public/SlideShow.png"} link={"https://hellencristinap.github.io/slidesShow/"} linkRepo={"https://github.com/HellenCristinaP/slidesShow.github.io"} icon={"fa-solid fa-images"}/>
