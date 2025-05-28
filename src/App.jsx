@@ -84,18 +84,18 @@ function App() {
       </main>
         <h2 class="py-2">Projetos</h2>
         <article class="grid grid-cols-2 gap-3">
-          <Projetos nameproject={"SlideShow em JS"} image="./public/SlideShow.png" link={"https://hellencristinap.github.io/slidesShow/"} linkRepo={"https://github.com/HellenCristinaP/slidesShow.github.io"} icon={"fa-solid fa-images"}/>
+          <Projetos nameproject={"SlideShow em JS"} link={"https://hellencristinap.github.io/slidesShow/"} linkRepo={"https://github.com/HellenCristinaP/slidesShow.github.io"} icon={"fa-solid fa-images"}/>
 
-          <Projetos nameproject={"Impar ou par"} image="./public/numeros.png" link={"https://hellencristinap.github.io/numeros/"} linkRepo={"https://github.com/HellenCristinaP/numeros"}
-          //  icon={"fab fa-js"}
+          <Projetos nameproject={"Impar ou par"} link={"https://hellencristinap.github.io/numeros/"} linkRepo={"https://github.com/HellenCristinaP/numeros"}
+           icon={"fab fa-js"}
           />
           
-          <Projetos nameproject={"Previsão do Tempo"} image="/public/Tempo.png" link={"https://previsao-do-tempo-8jrg.onrender.com"} linkRepo={"https://github.com/HellenCristinaP/previsao_do_tempo"} 
-          // icon={"fab fa-js"}
+          <Projetos nameproject={"Previsão do Tempo"}link={"https://previsao-do-tempo-8jrg.onrender.com"} linkRepo={"https://github.com/HellenCristinaP/previsao_do_tempo"} 
+          icon={"fab fa-js"}
           />
 
           <Projetos nameproject={"Verificar Lucro"} image="/public/Lucros.png" link={"https://hellencristinap.github.io/Lucro/"} linkRepo={"https://github.com/HellenCristinaP/Lucro"}
-          // icon={"fab fa-js"}
+          icon={"fab fa-js"}
           />          
           
         </article>

@@ -1,9 +1,8 @@
-function projetos({ nameproject, link, linkRepo, image, icon,}) {
+function projetos({ nameproject, link, linkRepo}) {
   return (
     <div class="flex flex-col justify-between h-full border-1 border-purple-800 rounded-xl py-3 px-2">
       <div>
         <h3 class="mx-2 text-2xl">{nameproject}</h3>
-        <img src={image} alt="imagem do projeto" class="rounded-lg"/>
       </div>
 
       <div class="flex mt-4 justify-">
