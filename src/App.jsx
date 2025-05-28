@@ -37,6 +37,7 @@ function App() {
         <p>Estou cursando {subjects}, na {colegy} no 3º semestre da faculdade.</p>
         <br />
       </header>
+      <main>
         <h2>Habilidades</h2>
         <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2">
           <li>HTML
@@ -78,22 +79,22 @@ function App() {
 
         </ul>
         <br />
-        <p class="pb-3"><strong>Estou em busca de oportunidades</strong>, quer saber mais? Baixe meu curriculo.</p>
-        <a href="./curriculo/Curriculo_Hellen.Cristina.pdf" download="./curriculo/Curriculo_Hellen.Cristina.pdf" class="cursor-pointer py-1 px-4 mx-2 bg-purple-800 text-[#f1f1f1]/50 rounded-3xl hover:text-[#f1f1f1] hover:bg-purple-800/70 transition font-semibold shadow-md sm:py-2.5">Baixar curriculo</a>
-
+          <p class="pb-3"><strong>Estou em busca de oportunidades</strong>, quer saber mais? Baixe meu curriculo.</p>
+          <a href="./curriculo/Curriculo_Hellen.Cristina.pdf" download="./curriculo/Curriculo_Hellen.Cristina.pdf" class="cursor-pointer py-1 px-4 mx-2 bg-purple-800 text-[#f1f1f1]/50 rounded-3xl hover:text-[#f1f1f1] hover:bg-purple-800/70 transition font-semibold shadow-md sm:py-2.5">Baixar curriculo</a>
+      </main>
         <h2 class="py-2">Projetos</h2>
         <article class="grid grid-cols-2 gap-3">
-          <Projetos nameproject={"SlideShow em JS"} image={"./src/public/SlideShow.png"} link={"https://hellencristinap.github.io/slidesShow/"} linkRepo={"https://github.com/HellenCristinaP/slidesShow.github.io"} icon={"fa-solid fa-images"}/>
+          <Projetos nameproject={"SlideShow em JS"} image={"src/public/SlideShow.png"} link={"https://hellencristinap.github.io/slidesShow/"} linkRepo={"https://github.com/HellenCristinaP/slidesShow.github.io"} icon={"fa-solid fa-images"}/>
 
-          <Projetos nameproject={"Impar ou par"} image={"./src/public/numeros.png"} link={"https://hellencristinap.github.io/numeros/"} linkRepo={"https://github.com/HellenCristinaP/numeros"}
+          <Projetos nameproject={"Impar ou par"} image={"src/public/numeros.png"} link={"https://hellencristinap.github.io/numeros/"} linkRepo={"https://github.com/HellenCristinaP/numeros"}
           //  icon={"fab fa-js"}
           />
           
-          <Projetos nameproject={"Previsão do Tempo"} image={"./src/public/Tempo.png"} link={"https://previsao-do-tempo-8jrg.onrender.com"} linkRepo={"https://github.com/HellenCristinaP/previsao_do_tempo"} 
+          <Projetos nameproject={"Previsão do Tempo"} image={"src/public/Tempo.png"} link={"https://previsao-do-tempo-8jrg.onrender.com"} linkRepo={"https://github.com/HellenCristinaP/previsao_do_tempo"} 
           // icon={"fab fa-js"}
           />
 
-          <Projetos nameproject={"Verificar Lucro"} image={"./src/public/Lucros.png"} link={"https://hellencristinap.github.io/Lucro/"} linkRepo={"https://github.com/HellenCristinaP/Lucro"}
+          <Projetos nameproject={"Verificar Lucro"} image={"src/public/Lucros.png"} link={"https://hellencristinap.github.io/Lucro/"} linkRepo={"https://github.com/HellenCristinaP/Lucro"}
           // icon={"fab fa-js"}
           />          
           
