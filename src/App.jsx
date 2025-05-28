@@ -1,4 +1,5 @@
 // Corpo do portifolio. Componente principal do portifolio
+import { use, useEffect } from 'react';
 import Block from './block'
 import BlockC from './blockC'
 import Projetos from './projetos'
@@ -11,11 +12,20 @@ function App() {
   const colegy = "UNIMES"
   const subjects = "Análise e Desenvolvimento de Sistemas";
 
+  useEffect(() => {
+    fetch('https://api.github.com/users/HellenCristinaP')
+      .then((res) => res.json())
+      .then((data) => {
+        const img = document.querySelector('#imgG');
+        img.src = data.avatar_url;
+        img.alt = `Foto de ${name}`;
+      })
+  }, []);
 
   return (
     <div class="border-1 border-purple-600 rounded-2xl w-95 mx-auto my-5 px-3 py-4 sm:w-130 lg:w-220 lg:px-5">
       <header class="py-2">
-        <img src="../img/appiconG.png" alt="Foto minha" class="block float-right rounded-full h-20 sm:h-30 lg:h-50 lg:mx-3"/>
+        <img src="" alt="Foto minha" class="block float-right rounded-full h-20 sm:h-30 lg:h-50 lg:mx-3" id='imgG'/>
         <h1 class="text-4xl font-extrabold sm:text-5xl lg:text-6xl">{name}</h1>
         <h2>{objective}</h2>
         <br />
