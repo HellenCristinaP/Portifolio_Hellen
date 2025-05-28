@@ -87,12 +87,15 @@ function App() {
           <Projetos nameproject={"SlideShow em JS"} image="src/public/SlideShow.png" link={"https://hellencristinap.github.io/slidesShow/"} linkRepo={"https://github.com/HellenCristinaP/slidesShow.github.io"} icon={"fa-solid fa-images"}/>
 
           <Projetos nameproject={"Impar ou par"} image="src/public/numeros.png" link={"https://hellencristinap.github.io/numeros/"} linkRepo={"https://github.com/HellenCristinaP/numeros"}
+          //  icon={"fab fa-js"}
           />
           
           <Projetos nameproject={"Previsão do Tempo"} image="src/public/Tempo.png" link={"https://previsao-do-tempo-8jrg.onrender.com"} linkRepo={"https://github.com/HellenCristinaP/previsao_do_tempo"} 
+          // icon={"fab fa-js"}
           />
 
-          <Projetos nameproject={"Verificar Lucro"} image={"src/public/Lucros.png"} link={"https://hellencristinap.github.io/Lucro/"} linkRepo={"https://github.com/HellenCristinaP/Lucro"}
+          <Projetos nameproject={"Verificar Lucro"} image="src/public/Lucros.png" link={"https://hellencristinap.github.io/Lucro/"} linkRepo={"https://github.com/HellenCristinaP/Lucro"}
+          // icon={"fab fa-js"}
           />          
           
         </article>
