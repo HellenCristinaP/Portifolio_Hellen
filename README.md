@@ -1,4 +1,4 @@
-# Portfólio Hellen Cristina 💻✨
+# Portifólio Hellen Cristina 💻✨
 
 Bem-vindo(a) ao meu portfólio! Este projeto foi desenvolvido com o objetivo de apresentar minhas habilidades como desenvolvedora front-end, destacando meus principais projetos, tecnologias e trajetória profissional.
 
