@@ -3,6 +3,8 @@ import { use, useEffect } from 'react';
 import Block from './block'
 import BlockC from './blockC'
 import Projetos from './projetos'
+import menu from './assets/menu.svg'
+import fecharMenu from './assets/fecharMenu.svg'
 
 function App() {
   // Dados do portifólio
@@ -20,9 +22,9 @@ function App() {
     nav.classList.toggle('hidden');
     // lembre-se que não é nav.classList == 'hidden', pois o classList é uma lista de classes, não uma string, então temos que colocar contains para verificar o estado da classe
     if (nav.classList.contains('hidden')) {
-      imgMenu.style.backgroundImage = "url('src/assets/menu.svg')";
+      imgMenu.style.backgroundImage = `url(${menu})`;
     } else {
-      imgMenu.style.backgroundImage = "url('src/assets/fecharMenu.svg')";
+      imgMenu.style.backgroundImage = `url(${fecharMenu})`;
     }
   }
 
@@ -50,7 +52,7 @@ function App() {
         </ul>
       </nav>
       <header className="bg-gradient-to-t from to-65% to-purple-800 px-8 pt-15 lg:px-40" id='home'>
-        <img src="" alt="Foto minha" className="block float-right rounded-full h-20 sm:h-30 lg:h-50 lg:mx-3" id='imgG'/>
+        <img src="" alt="Foto minha" className="block float-right rounded-full h-25 sm:h-30 lg:h-45 lg:mx-3" id='imgG'/>
         <h1 className="text-4xl font-extrabold sm:text-5xl lg:text-6xl">{name}</h1>
         <h2>{objective}</h2>
         <br />
