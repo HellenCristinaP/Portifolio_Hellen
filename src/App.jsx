@@ -1,10 +1,8 @@
 // Corpo do portifolio. Componente principal do portifolio
-import { use, useEffect } from 'react';
+import { useEffect } from 'react';
 import Block from './block'
 import BlockC from './blockC'
 import Projetos from './projetos'
-import menu from './assets/menu.svg'
-import fecharMenu from './assets/fecharMenu.svg'
 
 function App() {
   // Dados do portifólio
@@ -17,17 +15,10 @@ function App() {
 
   function abrirMenu() {
     const nav = document.querySelector('#nav');
-    let imgMenu = document.querySelector('#btnMenu');
 
     nav.classList.toggle('hidden');
+
     // lembre-se que não é nav.classList == 'hidden', pois o classList é uma lista de classes, não uma string, então temos que colocar contains para verificar o estado da classe
-    if (nav.classList.contains('hidden')) {
-      imgMenu.src = menu;
-      imgMenu.alt = 'Abrir menu';
-    } else {
-      imgMenu.src = fecharMenu;
-      imgMenu.alt = 'Fechar menu';
-    }
   }
 
   useEffect(() => {
@@ -41,13 +32,28 @@ function App() {
   }, []);
   return (
     <div className="mx-auto">
-      {/* fixed top-0 w-full bg-purple-800 px-15 py-2 border-b-2 border-amber-400 shadow-md */}
-      <div className="fixed w-full">
-        <button className="fixed size-8 cursor-pointer right-0 m-5 md:hidden" onClick={abrirMenu} id='btnMenu'>
-          <img src={menu} alt="Menu" id="iconMenu" />
-        </button>
-        <nav className="bg-purple-800 p-10 hidden md:block md:justify-items-center  md:border-b-2 border-amber-400 md:p-2" id='nav'>
-          <ul className="flex flex-col capitalize size-dvw justify-between text-[#f1f1f1]/50 font-semibold text-2xl mx-2
+      <div className="fixed md:static">
+        <div className="fixed right-0 m-3">
+          <label>
+            <div
+              className="w-9 h-10 cursor-pointer flex flex-col items-center justify-center"
+            >
+            <input className="hidden peer" type="checkbox" onClick={abrirMenu}/>
+              <div
+                className="w-[80%] h-[2px] bg-white rounded-sm transition-all duration-300 origin-left translate-y-[0.75rem] peer-checked:rotate-[-45deg]"
+              ></div>
+              <div
+                className="w-[60%] h-[2px] bg-white rounded-md transition-all duration-300 origin-center peer-checked:hidden"
+              ></div>
+              <div
+                className="w-[80%] h-[2px] bg-white rounded-md transition-all duration-300 origin-left -translate-y-[0.75rem] peer-checked:rotate-[45deg]"
+                ></div>
+            </div>
+          </label>
+          </div>
+
+        <nav className="bg-purple-900 border-b-amber-400 size-svh p-7 hidden md:block md:justify-items-center md:border-b-2 border-amber-400 md:p-2 md:w-full md:h-fit md:bg-purple-800" id='nav'>
+          <ul className="flex flex-col capitalize justify-between text-[#f1f1f1]/50 font-semibold text-2xl mx-2 gap-20
         md:flex-row md:size-fit md:gap-15">
             <li><a href="#home" className="hover:text-[#f1f1f1]">Home</a></li>
             <li><a href="#habilidades" className="hover:text-[#f1f1f1]">Habilidades</a></li>
@@ -56,7 +62,7 @@ function App() {
           </ul>
         </nav>
       </div>
-      <header className="bg-gradient-to-t from to-65% to-purple-800 px-8 pt-15 lg:px-40" id='home'>
+      <header className="bg-gradient-to-t to-65% to-purple-800 px-8 pt-15 lg:px-40" id='home'>
         <img src="" alt="Foto minha" className="block float-right rounded-full h-25 sm:h-30 lg:h-45 lg:mx-3" id='imgG' />
         <h1 className="text-4xl font-extrabold sm:text-5xl lg:text-6xl">{name}</h1>
         <h2>{objective}</h2>
@@ -135,7 +141,7 @@ function App() {
       </main>
       <footer className="text-center pt-5">
         <p className="text-sm font-light pt-3 mb-2" id='redessociais'>Minhas redes sociais</p>
-        <a href="https:www.linkedin.com/in/hellen-cristina-araújo-da-silva"><i className="fab fa-linkedin"></i></a>
+        <a href="https://www.linkedin.com/in/hellen-cristina-araújo-da-silva"><i className="fab fa-linkedin"></i></a>
         <a href="https://github.com/HellenCristinaP"><i className="fab fa-github"></i></a>
       </footer>
     </div>
