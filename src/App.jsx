@@ -33,7 +33,7 @@ function App() {
   return (
     <div className="mx-auto">
       <div className="fixed md:static">
-        <div className="fixed right-0 m-3">
+        <div className="fixed right-0 m-3 md:hidden">
           <label>
             <div
               className="w-9 h-10 cursor-pointer flex flex-col items-center justify-center"
@@ -62,7 +62,7 @@ function App() {
           </ul>
         </nav>
       </div>
-      <header className="bg-gradient-to-t to-65% to-purple-800 px-8 pt-15 lg:px-40" id='home'>
+      <header className="bg-gradient-to-t to-65% to-purple-800 px-8 pt-15.5 lg:px-40" id='home'>
         <img src="" alt="Foto minha" className="block float-right rounded-full h-25 sm:h-30 lg:h-45 lg:mx-3" id='imgG' />
         <h1 className="text-4xl font-extrabold sm:text-5xl lg:text-6xl">{name}</h1>
         <h2>{objective}</h2>
