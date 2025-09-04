@@ -16,4 +16,4 @@ function projetos({ nameproject, link, linkRepo, descrition}) {
   )
 }
 
-export default projetos;
+export default projetos

@@ -8,37 +8,50 @@ import Propriedades from './prioridades.jsx'
 function App() {
   // Dados do portifólio
   const name = "Hellen Cristina";
-  const iam = "Estudante de Análise e Desenvolvimento de Sistemas";
+  const iAm = "Estudante de Análise e Desenvolvimento de Sistemas";
   const objective = "Desenvolvedora Front-end";
   const colegy = "UNIMES"
   const subjects = "Análise e Desenvolvimento de Sistemas";
   const semestre = 4 + "º"
+  let menuFechado = true;
 
   function abrirMenu() {
-    const nav = document.querySelector('#nav');
-
-    nav.classList.toggle('hidden');
-
-    // lembre-se que não é nav.classList == 'hidden', pois o classList é uma lista de classes, não uma string, então temos que colocar contains para verificar o estado da classe
+    const nav = document.querySelector('#nav')
+    const closeMenu = document.querySelector('#closeMenu')
+    const openMenu = document.querySelector('#openMenu')
+    
+    if (menuFechado){
+      nav.classList.remove('hidden')
+      closeMenu.classList.remove('hidden')
+      closeMenu.classList.add('flex')
+      openMenu.classList.add('hidden')
+      menuFechado = false
+      
+    } else {
+      nav.classList.add('hidden')
+      closeMenu.classList.add('hidden')
+      openMenu.classList.remove('hidden')
+      menuFechado = true
+    }
   }
 
   useEffect(() => {
     fetch('https://api.github.com/users/HellenCristinaP')
       .then((res) => res.json())
       .then((data) => {
-        const img = document.querySelector('#imgG');
-        img.src = data.avatar_url;
-        img.alt = `Foto de ${name}`;
+        const img = document.querySelector('#imgG')
+        img.src = data.avatar_url
+        img.alt = `Foto de ${name}`
       })
   }, []);
+
   return (
     <div className="mx-auto">
       <div className="fixed md:static">
         <div className="fixed right-0 m-3 md:hidden">
           <button type="checkbox" onClick={abrirMenu}>
             <span
-              className="w-9 h-10 cursor-pointer flex flex-col items-center justify-center"
-            >
+              className="w-9 h-10 cursor-pointer flex flex-col items-center justify-center" id="openMenu" aria-label='Abrir Menu'>
               <span
                 className="w-[80%] h-[2px] bg-white rounded-sm transition-all duration-300 origin-left translate-y-[0.75rem] peer-checked:rotate-[-45deg]"
               ></span>
@@ -47,6 +60,16 @@ function App() {
               ></span>
               <span
                 className="w-[80%] h-[2px] bg-white rounded-md transition-all duration-300 origin-left -translate-y-[0.75rem] peer-checked:rotate-[45deg]"
+              ></span>
+            </span>
+            
+            <span
+              className="w-9 h-10 cursor-pointer flex-col items-center justify-center hidden" id="closeMenu" aria-label='Fechar Menu'>
+              <span
+                className="w-[80%] h-[2px] bg-white rounded-sm transition-all duration-300 origin-left translate-y-[0.75rem] rotate-[-45deg]"
+              ></span>
+              <span
+                className="w-[80%] h-[2px] bg-white rounded-md transition-all duration-300 origin-left -translate-y-[0.65rem] rotate-[45deg]"
               ></span>
             </span>
           </button>
@@ -65,7 +88,7 @@ function App() {
         <img src="https://avatars.githubusercontent.com/u/76890061?v=4" alt="Foto minha | uma garota branca que usa óculos e tem com cabelos longos e pretos" className="block float-right rounded-full h-25 sm:h-30 lg:h-45 lg:mx-3" id='imgG' />
         <h1 className="text-4xl font-extrabold sm:text-5xl lg:text-6xl">{name}</h1>
         <h2 className="mt-1 mb-5 font-semibold">{objective}</h2>
-        <p>Olá, meu nome é {name}, sou {iam} e tenho desejo ser {objective}. <br />
+        <p>Olá, meu nome é {name}, sou {iAm} e tenho desejo ser {objective}. <br />
           Trabalhei por mais de 1 ano com atendimento ao cliente e agora quero migrar a programação, amo a sensação de códigos virando uma página web. Tenho afinidade em front-end, mas pretendo ser Full Stack, então estou aberta a aprender.</p>
         <main>
           <section className="mx-3 my-5 p-5 border-2 border-white rounded-2xl">
