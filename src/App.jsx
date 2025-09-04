@@ -19,19 +19,21 @@ function App() {
     const nav = document.querySelector('#nav')
     const closeMenu = document.querySelector('#closeMenu')
     const openMenu = document.querySelector('#openMenu')
-    
+    const menu = document.querySelector('#menu')
+
     if (menuFechado){
       nav.classList.remove('hidden')
       closeMenu.classList.remove('hidden')
       closeMenu.classList.add('flex')
       openMenu.classList.add('hidden')
       menuFechado = false
-      
+      menu.ariaLabel = 'Fechar menu de Navegação'
     } else {
       nav.classList.add('hidden')
       closeMenu.classList.add('hidden')
       openMenu.classList.remove('hidden')
       menuFechado = true
+      menu.ariaLabel = 'Abrir menu de Navegação'
     }
   }
 
@@ -49,9 +51,9 @@ function App() {
     <div className="mx-auto">
       <div className="fixed md:static">
         <div className="fixed right-0 m-3 md:hidden">
-          <button type="checkbox" onClick={abrirMenu}>
+          <button type="checkbox" onClick={abrirMenu} aria-label='Abrir menu de Navegação' id='menu'>
             <span
-              className="w-9 h-10 cursor-pointer flex flex-col items-center justify-center" id="openMenu" aria-label='Abrir Menu'>
+              className="w-9 h-10 cursor-pointer flex flex-col items-center justify-center" id="openMenu">
               <span
                 className="w-[80%] h-[2px] bg-white rounded-sm transition-all duration-300 origin-left translate-y-[0.75rem] peer-checked:rotate-[-45deg]"
               ></span>
@@ -64,7 +66,7 @@ function App() {
             </span>
             
             <span
-              className="w-9 h-10 cursor-pointer flex-col items-center justify-center hidden" id="closeMenu" aria-label='Fechar Menu'>
+              className="w-9 h-10 cursor-pointer flex-col items-center justify-center hidden" id="closeMenu">
               <span
                 className="w-[80%] h-[2px] bg-white rounded-sm transition-all duration-300 origin-left translate-y-[0.75rem] rotate-[-45deg]"
               ></span>
