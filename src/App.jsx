@@ -1,9 +1,14 @@
 // Corpo do portifolio. Componente principal do portifolio
 import { useEffect } from 'react';
-import Block from './block'
-import BlockC from './blockC'
 import Projetos from './projetos'
 import Propriedades from './prioridades.jsx'
+import html from '../public/html-5.png';
+import css from '../public/css-3.png';
+import js from '../public/javascript.png';
+import tailwind from '../public/tailwind-css.png';
+import sass from '../public/sass.png';
+import bootstrap from '../public/bootstrap.png';
+import react from '../public/react.png';
 
 function App() {
   // Dados do portifólio
@@ -27,13 +32,13 @@ function App() {
       closeMenu.classList.add('flex')
       openMenu.classList.add('hidden')
       menuFechado = false
-      menu.ariaLabel = 'Fechar menu de Navegação'
+      menu.setAttribute('aria-label', 'Fechar menu de Navegação')
     } else {
       nav.classList.add('hidden')
       closeMenu.classList.add('hidden')
       openMenu.classList.remove('hidden')
       menuFechado = true
-      menu.ariaLabel = 'Abrir menu de Navegação'
+      menu.setAttribute('aria-label', 'Abrir menu de Navegação')
     }
   }
 
@@ -103,47 +108,18 @@ function App() {
       </header>
       <main className="px-8 pt-15 lg:px-40">
         <h2 id='habilidades'>Habilidades</h2>
-        <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-          <li>HTML
-            <div className="flex gap-0.5">
-              <BlockC /><Block /><Block />
-            </div>
-          </li>
-
-          <li>CSS
-            <div className="flex gap-0.5">
-              <BlockC /><Block /><Block />
-            </div>
-          </li>
-
-          <li>JavaScript
-            <div className="flex gap-0.5">
-              <BlockC /><Block /><Block />
-            </div>
-          </li>
-
-          <li>React
-
-            <div className="flex gap-0.5">
-              <BlockC /><Block /><Block />
-            </div>
-          </li>
-
-          <li>Node.js
-            <div className="flex gap-0.5">
-              <BlockC /><Block /><Block />
-            </div>
-          </li>
-
-          <li>GitHub
-            <div className="flex gap-0.5">
-              <BlockC /><Block /><Block />
-            </div>
-          </li>
+        <ul className="flex flex-wrap justify-center gap-5 py-5">
+          <li><img src={html} alt="HTML" /></li>
+          <li><img src={css} alt="CSS" /></li>
+          <li><img src={js} alt="JavaScript" /></li>
+          <li><img src={tailwind} alt="TailwindCSS" /></li>
+          <li><img src={sass} alt="Sass" /></li>
+          <li><img src={bootstrap} alt="Bootstrap" /></li>
+          <li><img src={react} alt="React" /></li>
         </ul>
         <br />
-        <p className="pb-5"><strong>Estou em busca de oportunidades</strong>, quer saber mais? Baixe meu curriculo.</p>
-        <a href="./curriculo/Curriculo_Hellen_Estágio_FrontEnd.pdf" download="./curriculo/Curriculo_Hellen_Estágio_FrontEnd.pdf" className="cursor-pointer py-2.5 px-4 bg-purple-800 text-[#f1f1f1]/50 rounded-3xl hover:text-[#f1f1f1] hover:bg-purple-800/70 transition font-semibold shadow-md">Baixar curriculo</a>
+        {/* <p className="pb-5">Estou em busca de oportunidades, clique abaixo para baixar meu currículo e saber mais!</p>
+        <a href="./curriculo/Curriculo_Hellen_Estágio_FrontEnd.pdf" download="./curriculo/Curriculo_Hellen_Estágio_FrontEnd.pdf" className="cursor-pointer py-2.5 px-4 bg-purple-800 text-[#f1f1f1]/50 rounded-3xl hover:text-[#f1f1f1] hover:bg-purple-800/70 transition font-semibold shadow-md">Baixar curriculo</a> */}
 
         <h2 className="py-5" id='projetos'>Projetos</h2>
         <article className="grid grid-cols-1 gap-3 px-5 pt-2 md:grid-cols-2">
@@ -166,8 +142,8 @@ function App() {
       </main>
       <footer className="text-center pt-5">
         <p className="text-sm font-light pt-3 mb-2" id='redessociais'>Minhas redes sociais</p>
-        <a href="https://www.linkedin.com/in/hellen-cristina-araújo-da-silva"><i className="fab fa-linkedin"></i></a>
-        <a href="https://github.com/HellenCristinaP"><i className="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/hellen-cristina-araújo-da-silva" aria-label='link para meu perfil no Linkedin'><i className="fab fa-linkedin"></i></a>
+        <a href="https://github.com/HellenCristinaP" aria-label='link para meu perfil no Github'><i className="fab fa-github"></i></a>
       </footer>
     </div>
   )
