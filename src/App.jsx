@@ -26,19 +26,21 @@ function App() {
     const openMenu = document.querySelector('#openMenu')
     const menu = document.querySelector('#menu')
 
-    if (menuFechado){
+    if (menuFechado) {
       nav.classList.remove('hidden')
       closeMenu.classList.remove('hidden')
       closeMenu.classList.add('flex')
       openMenu.classList.add('hidden')
       menuFechado = false
       menu.setAttribute('aria-label', 'Fechar menu de Navegação')
+      menu.classList.remove('bg-[#59168B]')
     } else {
       nav.classList.add('hidden')
       closeMenu.classList.add('hidden')
       openMenu.classList.remove('hidden')
       menuFechado = true
       menu.setAttribute('aria-label', 'Abrir menu de Navegação')
+      menu.classList.add('bg-[#59168B]')
     }
   }
 
@@ -55,23 +57,22 @@ function App() {
   return (
     <div className="mx-auto">
       <div className="fixed md:static">
-        <div className="fixed right-0 m-3 md:hidden">
-          <button type="checkbox" onClick={abrirMenu} aria-label='Abrir menu de Navegação' id='menu'>
+        <div className="fixed md:hidden w-full">
+          <button type="checkbox" onClick={abrirMenu} aria-label='Abrir menu de Navegação' id='menu' className="flex w-full justify-end bg-[#59168B]">
             <span
-              className="w-9 h-10 cursor-pointer flex flex-col items-center justify-center" id="openMenu">
+              className="w-10 h-12 cursor-pointer flex flex-col items-center justify-center mx-4 my-2.5" id="openMenu">
               <span
-                className="w-[80%] h-[2px] bg-white rounded-sm transition-all duration-300 origin-left translate-y-[0.75rem] peer-checked:rotate-[-45deg]"
+                className="w-[80%] h-[2px] bg-white rounded-sm transition-all duration-300 origin-left translate-y-[0.75rem]"></span>
+              <span
+                className="w-[60%] h-[2px] bg-white rounded-md transition-all duration-300 origin-center"
               ></span>
               <span
-                className="w-[60%] h-[2px] bg-white rounded-md transition-all duration-300 origin-center peer-checked:hidden"
-              ></span>
-              <span
-                className="w-[80%] h-[2px] bg-white rounded-md transition-all duration-300 origin-left -translate-y-[0.75rem] peer-checked:rotate-[45deg]"
+                className="w-[80%] h-[2px] bg-white rounded-md transition-all duration-300 origin-left -translate-y-[0.75rem]"
               ></span>
             </span>
-            
+
             <span
-              className="w-9 h-10 cursor-pointer flex-col items-center justify-center hidden" id="closeMenu">
+              className="w-9 h-10 cursor-pointer flex-col items-center justify-center hidden m-3" id="closeMenu">
               <span
                 className="w-[80%] h-[2px] bg-white rounded-sm transition-all duration-300 origin-left translate-y-[0.75rem] rotate-[-45deg]"
               ></span>
@@ -79,11 +80,11 @@ function App() {
                 className="w-[80%] h-[2px] bg-white rounded-md transition-all duration-300 origin-left -translate-y-[0.65rem] rotate-[45deg]"
               ></span>
             </span>
+
           </button>
         </div>
-        <nav className="bg-purple-900 border-b-amber-400 size-svh p-7 hidden md:block md:justify-items-center md:border-b-2 border-amber-400 md:p-2 md:w-full md:h-fit md:bg-purple-800" id='nav'>
-          <ul className="flex flex-col capitalize justify-between text-[#f1f1f1]/50 font-semibold text-2xl mx-2 gap-20
-        md:flex-row md:size-fit md:gap-15">
+        <nav className="bg-purple-900 size-svh px-7 py-10 hidden md:block md:justify-items-center md:border-b-1 border-amber-400 md:p-2 md:w-full md:h-fit md:bg-purple-800" id='nav'>
+          <ul className="flex flex-col capitalize justify-between text-[#f1f1f1]/50 font-semibold text-2xl mx-2 gap-20">
             <li><a href="#home" className="hover:text-[#f1f1f1]">Home</a></li>
             <li><a href="#habilidades" className="hover:text-[#f1f1f1]">Habilidades</a></li>
             <li><a href="#projetos" className="hover:text-[#f1f1f1]">Projetos</a></li>
@@ -122,17 +123,14 @@ function App() {
         <a href="./curriculo/Curriculo_Hellen_Estágio_FrontEnd.pdf" download="./curriculo/Curriculo_Hellen_Estágio_FrontEnd.pdf" className="cursor-pointer py-2.5 px-4 bg-purple-800 text-[#f1f1f1]/50 rounded-3xl hover:text-[#f1f1f1] hover:bg-purple-800/70 transition font-semibold shadow-md">Baixar curriculo</a> */}
 
         <h2 className="py-5" id='projetos'>Projetos</h2>
-        <article className="grid grid-cols-1 gap-3 px-5 pt-2 md:grid-cols-2">
-          <Projetos nameproject={"SlideShow em JS"} link={"https://hellencristinap.github.io/slidesShow/"} linkRepo={"https://github.com/HellenCristinaP/slidesShow.github.io"} />
+        <article className="grid grid-cols-1 gap-3 px-5 pt-2 md:grid-cols-3">
+          <Projetos nameproject={"SlideShow em JavaScript"} link={"https://hellencristinap.github.io/slidesShow/"} linkRepo={"https://github.com/HellenCristinaP/slidesShow.github.io"} descrition={"Um projeto de apresentação de slides simples em JavaScript."} />
 
-          <Projetos nameproject={"Impar ou par"} link={"https://hellencristinap.github.io/numeros/"} linkRepo={"https://github.com/HellenCristinaP/numeros"}
-          />
+          <Projetos nameproject={"Impar ou par"} link={"https://hellencristinap.github.io/numeros/"} linkRepo={"https://github.com/HellenCristinaP/numeros"} descrition={"Site onde identificar se o número é impar ou par em JavaScript."} />
 
-          <Projetos nameproject={"Previsão do Tempo"} link={"https://previsao-do-tempo-8jrg.onrender.com"} linkRepo={"https://github.com/HellenCristinaP/previsao_do_tempo"}
-          />
+          <Projetos nameproject={"Previsão do Tempo"} link={"https://previsao-do-tempo-8jrg.onrender.com"} linkRepo={"https://github.com/HellenCristinaP/previsao_do_tempo"} descrition={"Um  site de previsão do tempo utilizando a API OpenWeather."} />
 
-          <Projetos nameproject={"Verificar Lucro"} image="/public/Lucros.png" link={"https://hellencristinap.github.io/Lucro/"} linkRepo={"https://github.com/HellenCristinaP/Lucro"}
-          />
+          <Projetos nameproject={"Verificar Lucro"} image="/public/Lucros.png" link={"https://hellencristinap.github.io/Lucro/"} linkRepo={"https://github.com/HellenCristinaP/Lucro"} descrition={"Um site para verificar lucros utilizando JavaScript."} />
 
           <Projetos nameproject={"Metabolismo Basal"} linkRepo={"https://github.com/HellenCristinaP/metabolismobasal"} descrition={"Projeto que estou contribuindo"} link={"https://adalbertobrant.github.io/metabolismobasal"} />
 
