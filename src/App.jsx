@@ -25,6 +25,8 @@ function App() {
     const closeMenu = document.querySelector('#closeMenu')
     const openMenu = document.querySelector('#openMenu')
     const menu = document.querySelector('#menu')
+    const menuDiv = document.querySelector('#menuDiv')
+    const a = document.querySelectorAll('ul li a')
 
     if (menuFechado) {
       nav.classList.remove('hidden')
@@ -33,14 +35,24 @@ function App() {
       openMenu.classList.add('hidden')
       menuFechado = false
       menu.setAttribute('aria-label', 'Fechar menu de Navegação')
-      menu.classList.remove('bg-[#59168B]')
+      a.forEach((element) => {
+        element.addEventListener('click', () => {
+          nav.classList.add('hidden')
+          closeMenu.classList.add('hidden')
+          openMenu.classList.remove('hidden')
+          menuFechado = true
+          menu.setAttribute('aria-label', 'Abrir menu de Navegação')
+          menuDiv.classList.add('bg-[#59168B]')
+        }
+        )
+      })
     } else {
       nav.classList.add('hidden')
       closeMenu.classList.add('hidden')
       openMenu.classList.remove('hidden')
       menuFechado = true
       menu.setAttribute('aria-label', 'Abrir menu de Navegação')
-      menu.classList.add('bg-[#59168B]')
+      menuDiv.classList.add('bg-[#59168B]')
     }
   }
 
@@ -57,8 +69,8 @@ function App() {
   return (
     <div className="mx-auto">
       <div className="fixed md:static">
-        <div className="fixed md:hidden w-full">
-          <button type="checkbox" onClick={abrirMenu} aria-label='Abrir menu de Navegação' id='menu' className="flex w-full justify-end bg-[#59168B]">
+        <div className="fixed md:hidden w-full bg-[#59168B] justify-end flex" id='menuDiv'>
+          <button type="checkbox" onClick={abrirMenu} aria-label='Abrir menu de Navegação' id='menu'>
             <span
               className="w-10 h-12 cursor-pointer flex flex-col items-center justify-center mx-4 my-2.5" id="openMenu">
               <span
@@ -83,8 +95,8 @@ function App() {
 
           </button>
         </div>
-        <nav className="bg-purple-900 size-svh px-7 py-10 hidden md:block md:justify-items-center md:border-b-1 border-amber-400 md:p-2 md:w-full md:h-fit md:bg-purple-800" id='nav'>
-          <ul className="flex flex-col capitalize justify-between text-[#f1f1f1]/50 font-semibold text-2xl mx-2 gap-20">
+        <nav className="bg-purple-900 size-svh px-7 py-15 hidden md:block md:justify-items-center md:border-b-1 border-amber-400 md:p-2 md:w-full md:h-fit md:bg-purple-800" id='nav'>
+          <ul className="flex flex-col capitalize justify-between text-[#f1f1f1]/50 font-semibold text-2xl mx-2 gap-20 md:flex-row">
             <li><a href="#home" className="hover:text-[#f1f1f1]">Home</a></li>
             <li><a href="#habilidades" className="hover:text-[#f1f1f1]">Habilidades</a></li>
             <li><a href="#projetos" className="hover:text-[#f1f1f1]">Projetos</a></li>
@@ -118,12 +130,12 @@ function App() {
           <li><img src={bootstrap} alt="Bootstrap" /></li>
           <li><img src={react} alt="React" /></li>
         </ul>
-        <br />
+
         {/* <p className="pb-5">Estou em busca de oportunidades, clique abaixo para baixar meu currículo e saber mais!</p>
         <a href="./curriculo/Curriculo_Hellen_Estágio_FrontEnd.pdf" download="./curriculo/Curriculo_Hellen_Estágio_FrontEnd.pdf" className="cursor-pointer py-2.5 px-4 bg-purple-800 text-[#f1f1f1]/50 rounded-3xl hover:text-[#f1f1f1] hover:bg-purple-800/70 transition font-semibold shadow-md">Baixar curriculo</a> */}
 
         <h2 className="py-5" id='projetos'>Projetos</h2>
-        <article className="grid grid-cols-1 gap-3 px-5 pt-2 md:grid-cols-3">
+        <article className="grid grid-cols-1 gap-2 px-2 md:grid-cols-3">
           <Projetos nameproject={"SlideShow em JavaScript"} link={"https://hellencristinap.github.io/slidesShow/"} linkRepo={"https://github.com/HellenCristinaP/slidesShow.github.io"} descrition={"Um projeto de apresentação de slides simples em JavaScript."} />
 
           <Projetos nameproject={"Impar ou par"} link={"https://hellencristinap.github.io/numeros/"} linkRepo={"https://github.com/HellenCristinaP/numeros"} descrition={"Site onde identificar se o número é impar ou par em JavaScript."} />
@@ -135,7 +147,6 @@ function App() {
           <Projetos nameproject={"Metabolismo Basal"} linkRepo={"https://github.com/HellenCristinaP/metabolismobasal"} descrition={"Projeto que estou contribuindo"} link={"https://adalbertobrant.github.io/metabolismobasal"} />
 
           <Projetos nameproject={"DIO Lab"} linkRepo={"https://github.com/HellenCristinaP/dio-lab-open-source/"} descrition={"Projeto onde aprendi a fazer README"} link={"https://digitalinnovationone.github.io/dio-lab-open-source"} />
-
         </article>
       </main>
       <footer className="text-center pt-5">

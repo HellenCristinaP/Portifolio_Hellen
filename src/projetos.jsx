@@ -7,9 +7,9 @@ function projetos({ nameproject, link, linkRepo, descrition }) {
 
       <p className="italic text-white/70">{descrition}</p>
 
-      <div className="flex mt-4 justify-center gap-2">
-        <a href={link} className="cursor-pointer py-2.5 px-7 bg-purple-800 text-[#f1f1f1]/50 rounded-3xl hover:text-[#f1f1f1] hover:bg-purple-800/70 transition font-semibold sm:px-6 sm:ml-2" aria-label={`Site do projeto ${nameproject}`}>Site</a>
-        <a href={linkRepo} className="cursor-pointer py-2.5 px-7 mx-2 bg-purple-800 text-[#f1f1f1]/50 rounded-3xl hover:text-[#f1f1f1] hover:bg-purple-800/70 transition font-semibold sm:px-6" aria-label={`Repositório do projeto ${nameproject}`}>Repositorio</a>
+      <div className="flex mt-3 justify-center">
+        <a href={link} className="cursor-pointer py-2.5 px-6 bg-purple-800 text-[#f1f1f1]/50 rounded-3xl hover:text-[#f1f1f1] hover:bg-purple-800/70 transition font-semibold sm:ml-2" aria-label={`Site do projeto ${nameproject}`}>Site</a>
+        <a href={linkRepo} className="cursor-pointer py-2.5 px-5 mx-2 bg-purple-800 text-[#f1f1f1]/50 rounded-3xl hover:text-[#f1f1f1] hover:bg-purple-800/70 transition font-semibold" aria-label={`Repositório do projeto ${nameproject}`}>Repositorio</a>
       </div>
     </div>
 
