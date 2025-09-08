@@ -64,6 +64,9 @@ function App() {
         img.src = data.avatar_url
         img.alt = `Foto de ${name}`
       })
+      .catch((error) => {
+        console.error('Erro ao buscar dados do GitHub:', error)
+      });
   }, []);
 
   return (
@@ -105,11 +108,13 @@ function App() {
         </nav>
       </div>
       <header className="bg-gradient-to-t to-65% to-purple-800 px-8 pt-25.5 lg:px-40" id='home'>
-        <img src="https://avatars.githubusercontent.com/u/76890061?v=4" alt="Foto minha | uma garota branca que usa óculos e tem com cabelos longos e pretos" className="block float-right rounded-full h-25 sm:h-30 lg:h-45 lg:mx-3" id='imgG' />
-        <h1 className="text-4xl font-extrabold sm:text-5xl lg:text-6xl">{name}</h1>
+        <img src="https://avatars.githubusercontent.com/u/76890061?v=4" alt="Foto minha | uma garota branca que usa óculos e tem com cabelos longos e pretos" className="block float-right rounded-full h-25 sm:h-30 lg:h-45" id='imgG' />
+
+        <h1 className="text-5xl font-extrabold">{name}</h1>
         <h2 className="mt-1 mb-5 font-semibold">{objective}</h2>
         <p>Olá, meu nome é {name}, sou {iAm} e tenho desejo ser {objective}. <br />
-          Trabalhei por mais de 1 ano com atendimento ao cliente e agora quero migrar a programação, amo a sensação de códigos virando uma página web. Tenho afinidade em front-end, mas pretendo ser Full Stack, então estou aberta a aprender.</p>
+          Trabalhei por mais de 1 ano com atendimento ao cliente e agora quero migrar a programação, amo a sensação de códigos virando uma página web. Tenho afinidade em front-end, mas pretendo ser Full Stack, então estou aberta a aprender.
+        </p>
         <main>
           <section className="mx-3 my-5 p-5 border-2 border-white rounded-2xl">
             <h2>Formação Acadêmica</h2>
@@ -149,10 +154,14 @@ function App() {
           <Projetos nameproject={"DIO Lab"} linkRepo={"https://github.com/HellenCristinaP/dio-lab-open-source/"} descrition={"Projeto onde aprendi a fazer README"} link={"https://digitalinnovationone.github.io/dio-lab-open-source"} />
         </article>
       </main>
-      <footer className="text-center pt-5">
+      <footer className="text-center pt-3">
         <p className="text-sm font-light pt-3 mb-2" id='redessociais'>Minhas redes sociais</p>
-        <a href="https://www.linkedin.com/in/hellen-cristina-araújo-da-silva" aria-label='link para meu perfil no Linkedin'><i className="fab fa-linkedin"></i></a>
-        <a href="https://github.com/HellenCristinaP" aria-label='link para meu perfil no Github'><i className="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/hellen-cristina-araújo-da-silva" aria-label='link para meu perfil no Linkedin'>
+          <i className="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/HellenCristinaP" aria-label='link para meu perfil no Github'>
+          <i className="fab fa-github"></i>
+        </a>
       </footer>
     </div>
   )
