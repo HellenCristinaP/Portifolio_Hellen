@@ -143,13 +143,13 @@ function App() {
 
         <h2 className="py-5" id='projetos'>Projetos</h2>
         <article className="grid grid-cols-1 gap-2 px-2 md:grid-cols-3">
-          <Projetos nameproject={"SlideShow em JavaScript"} link={"https://hellencristinap.github.io/slidesShow/"} linkRepo={"https://github.com/HellenCristinaP/slidesShow.github.io"} descrition={"Um projeto de apresentação de slides simples em JavaScript."} />
-
-          <Projetos nameproject={"Impar ou par"} link={"https://hellencristinap.github.io/numeros/"} linkRepo={"https://github.com/HellenCristinaP/numeros"} descrition={"Site onde identificar se o número é impar ou par em JavaScript."} />
-
           <Projetos nameproject={"Previsão do Tempo"} link={"https://previsao-do-tempo-8jrg.onrender.com"} linkRepo={"https://github.com/HellenCristinaP/previsao_do_tempo"} descrition={"Um  site de previsão do tempo utilizando a API OpenWeather."} />
 
+          <Projetos nameproject={"Lista de tarefas"} linkRepo={"https://github.com/HellenCristinaP/Todolist/tree/main"} descrition={"Projeto onde aprendi a manipular e criar elementos dinâmicos com JavaScript. Além de ser meu primeiro projeto que hospedei no Vercel."} link={"https://todolist-blush-nu.vercel.app/"} />
+
           <Projetos nameproject={"Verificar Lucro"} image="/public/Lucros.png" link={"https://hellencristinap.github.io/Lucro/"} linkRepo={"https://github.com/HellenCristinaP/Lucro"} descrition={"Um site para verificar lucros utilizando JavaScript."} />
+
+          <Projetos nameproject={"SlideShow em JavaScript"} link={"https://hellencristinap.github.io/slidesShow/"} linkRepo={"https://github.com/HellenCristinaP/slidesShow.github.io"} descrition={"Um projeto de apresentação de slides simples em JavaScript."} />
 
           <Projetos nameproject={"Metabolismo Basal"} linkRepo={"https://github.com/HellenCristinaP/metabolismobasal"} descrition={"Projeto que estou contribuindo"} link={"https://adalbertobrant.github.io/metabolismobasal"} />
 
