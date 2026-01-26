@@ -114,7 +114,7 @@ function App() {
 
         <h1 className="text-5xl font-extrabold">{name}</h1>
         <h2 className="mt-1 mb-5 font-semibold">{objective}</h2>
-        <p>Olá, meu nome é {name}, sou {iAm} e tenho desejo ser {objective}. <br />
+        <p>Olá, meu nome é {name}, sou {iAm} e estou estudando Desenvolvimento {objective} na EBAC. <br />
           Trabalhei por mais de 1 ano com atendimento ao cliente e agora quero migrar a programação, amo a sensação de códigos virando uma página web. Tenho afinidade em front-end, mas pretendo ser Full Stack, então estou aberta a aprender.
         </p>
         <main>
@@ -138,11 +138,10 @@ function App() {
           <li><img src={react} alt="React" /></li>
         </ul>
 
-        {/* <p className="pb-5">Estou em busca de oportunidades, clique abaixo para baixar meu currículo e saber mais!</p>
-        <a href="./curriculo/Curriculo_Hellen_Estágio_FrontEnd.pdf" download="./curriculo/Curriculo_Hellen_Estágio_FrontEnd.pdf" className="cursor-pointer py-2.5 px-4 bg-purple-800 text-[#f1f1f1]/50 rounded-3xl hover:text-[#f1f1f1] hover:bg-purple-800/70 transition font-semibold shadow-md">Baixar curriculo</a> */}
-
         <h2 className="py-5" id='projetos'>Projetos</h2>
         <article className="grid grid-cols-1 gap-2 px-2 md:grid-cols-3">
+          <Projetos nameproject={"IMC"} linkRepo={"https://github.com/HellenCristinaP/IMC"} descrition={"Projeto de verificar IMC, trabalhado por mim, com a EBAC"} link={"https://adalbertobrant.github.io/metabolismobasal"} />
+
           <Projetos nameproject={"Previsão do Tempo"} link={"https://previsao-do-tempo-8jrg.onrender.com"} linkRepo={"https://github.com/HellenCristinaP/previsao_do_tempo"} descrition={"Um  site de previsão do tempo utilizando a API OpenWeather."} />
 
           <Projetos nameproject={"Lista de tarefas"} linkRepo={"https://github.com/HellenCristinaP/Todolist/tree/main"} descrition={"Projeto onde aprendi a manipular e criar elementos dinâmicos com JavaScript. Além de ser meu primeiro projeto que hospedei no Vercel."} link={"https://todolist-blush-nu.vercel.app/"} />
@@ -151,7 +150,6 @@ function App() {
 
           <Projetos nameproject={"SlideShow em JavaScript"} link={"https://hellencristinap.github.io/slidesShow/"} linkRepo={"https://github.com/HellenCristinaP/slidesShow.github.io"} descrition={"Um projeto de apresentação de slides simples em JavaScript."} />
 
-          <Projetos nameproject={"Metabolismo Basal"} linkRepo={"https://github.com/HellenCristinaP/metabolismobasal"} descrition={"Projeto que estou contribuindo"} link={"https://adalbertobrant.github.io/metabolismobasal"} />
 
           <Projetos nameproject={"DIO Lab"} linkRepo={"https://github.com/HellenCristinaP/dio-lab-open-source/"} descrition={"Projeto onde aprendi a fazer README"} link={"https://digitalinnovationone.github.io/dio-lab-open-source"} />
         </article>
