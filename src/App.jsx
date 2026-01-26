@@ -1,7 +1,9 @@
-// Corpo do portifolio. Componente principal do portifolio
+// import React
 import { useEffect } from 'react';
-import Projetos from './projetos'
-import Propriedades from './prioridades.jsx'
+// import components
+import Projetos from './components/projetos.jsx'
+import Propriedades from './components/prioridades.jsx';
+// import images
 import html from '../public/html-5.png';
 import css from '../public/css-3.png';
 import js from '../public/javascript.png';
@@ -112,7 +114,7 @@ function App() {
 
         <h1 className="text-5xl font-extrabold">{name}</h1>
         <h2 className="mt-1 mb-5 font-semibold">{objective}</h2>
-        <p>Olá, meu nome é {name}, sou {iAm} e tenho desejo ser {objective}. <br />
+        <p>Olá, meu nome é {name}, sou {iAm} e estou estudando Desenvolvimento {objective} na EBAC. <br />
           Trabalhei por mais de 1 ano com atendimento ao cliente e agora quero migrar a programação, amo a sensação de códigos virando uma página web. Tenho afinidade em front-end, mas pretendo ser Full Stack, então estou aberta a aprender.
         </p>
         <main>
@@ -121,7 +123,7 @@ function App() {
             <h3 className="text-2xl lg:text-3xl">{subjects}</h3>
             <p>Estou cursando {subjects}, na {colegy} - {semestre} semestre</p>
           </section>
-          {/* <Propriedades /> */}
+          <Propriedades />
         </main>
       </header>
       <main className="px-8 pt-15 lg:px-40">
@@ -136,20 +138,18 @@ function App() {
           <li><img src={react} alt="React" /></li>
         </ul>
 
-        {/* <p className="pb-5">Estou em busca de oportunidades, clique abaixo para baixar meu currículo e saber mais!</p>
-        <a href="./curriculo/Curriculo_Hellen_Estágio_FrontEnd.pdf" download="./curriculo/Curriculo_Hellen_Estágio_FrontEnd.pdf" className="cursor-pointer py-2.5 px-4 bg-purple-800 text-[#f1f1f1]/50 rounded-3xl hover:text-[#f1f1f1] hover:bg-purple-800/70 transition font-semibold shadow-md">Baixar curriculo</a> */}
-
         <h2 className="py-5" id='projetos'>Projetos</h2>
         <article className="grid grid-cols-1 gap-2 px-2 md:grid-cols-3">
-          <Projetos nameproject={"SlideShow em JavaScript"} link={"https://hellencristinap.github.io/slidesShow/"} linkRepo={"https://github.com/HellenCristinaP/slidesShow.github.io"} descrition={"Um projeto de apresentação de slides simples em JavaScript."} />
-
-          <Projetos nameproject={"Impar ou par"} link={"https://hellencristinap.github.io/numeros/"} linkRepo={"https://github.com/HellenCristinaP/numeros"} descrition={"Site onde identificar se o número é impar ou par em JavaScript."} />
+          <Projetos nameproject={"IMC"} linkRepo={"https://github.com/HellenCristinaP/IMC"} descrition={"Projeto de verificar IMC, trabalhado por mim, com a EBAC"} link={"https://adalbertobrant.github.io/metabolismobasal"} />
 
           <Projetos nameproject={"Previsão do Tempo"} link={"https://previsao-do-tempo-8jrg.onrender.com"} linkRepo={"https://github.com/HellenCristinaP/previsao_do_tempo"} descrition={"Um  site de previsão do tempo utilizando a API OpenWeather."} />
 
+          <Projetos nameproject={"Lista de tarefas"} linkRepo={"https://github.com/HellenCristinaP/Todolist/tree/main"} descrition={"Projeto onde aprendi a manipular e criar elementos dinâmicos com JavaScript. Além de ser meu primeiro projeto que hospedei no Vercel."} link={"https://todolist-blush-nu.vercel.app/"} />
+
           <Projetos nameproject={"Verificar Lucro"} image="/public/Lucros.png" link={"https://hellencristinap.github.io/Lucro/"} linkRepo={"https://github.com/HellenCristinaP/Lucro"} descrition={"Um site para verificar lucros utilizando JavaScript."} />
 
-          <Projetos nameproject={"Metabolismo Basal"} linkRepo={"https://github.com/HellenCristinaP/metabolismobasal"} descrition={"Projeto que estou contribuindo"} link={"https://adalbertobrant.github.io/metabolismobasal"} />
+          <Projetos nameproject={"SlideShow em JavaScript"} link={"https://hellencristinap.github.io/slidesShow/"} linkRepo={"https://github.com/HellenCristinaP/slidesShow.github.io"} descrition={"Um projeto de apresentação de slides simples em JavaScript."} />
+
 
           <Projetos nameproject={"DIO Lab"} linkRepo={"https://github.com/HellenCristinaP/dio-lab-open-source/"} descrition={"Projeto onde aprendi a fazer README"} link={"https://digitalinnovationone.github.io/dio-lab-open-source"} />
         </article>
