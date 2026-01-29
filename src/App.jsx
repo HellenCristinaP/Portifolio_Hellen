@@ -14,27 +14,19 @@ import react from '../public/react.png';
 
 function App() {
   // Dados do portifólio
-  const iAm = "Estudante de Análise e Desenvolvimento de Sistemas";
-  const objective = "Desenvolvimento Front-end";
-  const colegy = "UNIMES"
-  const subjects = "Análise e Desenvolvimento de Sistemas";
-  const academico = [
+  const name = "Hellen Cristina"
+  const formacoes = [
     {
-      lugarDeFormacao = "UNIMES"
-      formacao = "Análise e Desenvolvimento de Sistemas"
+      lugarDaFormacao = "UNIMES"
+      curso = "Análise e Desenvolvimento de Sistemas"
       data = "01/2024 - 07/2026"
     }
     {
-      lugarDeFormacao = "EBAC"
-      formacao = "Engenheiro Front-end"
+      lugarDaFormacao = "EBAC"
+      curso = "Engenheiro Front-end"
       data = "01/2026 - 01/2027"
     }
   ]
-
-  function listaAcademica(){
-    academico.forEach((dados) =>
-    )
-  }
 
   let menuFechado = true;
 
@@ -128,8 +120,8 @@ function App() {
       <header className="bg-gradient-to-t to-65% to-purple-800 px-8 pt-25.5 lg:px-40" id='home'>
         <img src="https://avatars.githubusercontent.com/u/76890061?v=4" alt="Foto minha | uma garota branca que usa óculos e tem com cabelos longos e pretos" className="block float-right rounded-full h-25 sm:h-30 lg:h-45" id='imgG' />
 
-        <h1 className="text-5xl font-extrabold">Hellen Cristina</h1>
-        <h2 className="mt-1 mb-5 font-semibold">{objective}</h2>
+        <h1 className="text-5xl font-extrabold">{name}</h1>
+        <h2 className="mt-1 mb-5 font-semibold">Desenvolvedora Front-end</h2>
         <p>Olá, meu nome é Hellen Cristina, sou Estudante de Análise e Desenvolvimento de Sistemas e estou estudando {objective} na EBAC. <br />
           Amo ver meu código se transformar em um site moderno
         </p>
@@ -138,7 +130,11 @@ function App() {
             <h2>Formação Acadêmica</h2>
             {/* <h3 className="text-2xl lg:text-3xl">{subjects}</h3>
             <p>Estou cursando {subjects}, na {colegy} - {semestre} semestre</p> */}
-            {}
+            {formacoes.map((formacao) => 
+      (<section class="formacao">
+       <h3 class="lugarDaFormacao">{formacao.lugarDaFormacao}</h3>
+        <p class="curso">{formacao.curso} - {formacao.data}</p>
+      </section>))}
           </section>
           <Propriedades />
         </main>
