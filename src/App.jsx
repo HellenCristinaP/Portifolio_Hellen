@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 // import components
 import Projetos from './components/projetos.jsx'
 import Propriedades from './components/prioridades.jsx';
+import Menu from './components/menu.jsx';
 // import images
 import html from '../public/html-5.png';
 import css from '../public/css-3.png';
@@ -17,128 +18,65 @@ function App() {
   const name = "Hellen Cristina"
   const formacoes = [
     {
-      lugarDaFormacao = "UNIMES"
-      curso = "Análise e Desenvolvimento de Sistemas"
-      data = "01/2024 - 07/2026"
-    }
+      lugarDaFormacao: "UNIMES",
+      curso: "Análise e Desenvolvimento de Sistemas",
+      data: "01/2024 - 07/2026"
+    },
     {
-      lugarDaFormacao = "EBAC"
-      curso = "Engenheiro Front-end"
-      data = "01/2026 - 01/2027"
+      lugarDaFormacao: "EBAC",
+      curso: "Engenheiro Front-end",
+      data: "01/2026 - 01/2027"
     }
-  ]
+  ];
 
-  let menuFechado = true;
+  const hardSkills = [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React",
+    "TailwindCSS",
+    "Sass",
+    "Bootstrap",
+    "Git",
+    "GitHub",
+    "API",
+    "Técnicas de SEO",
+    "Técnicas de Acessibilidade"
+  ];
 
-  function abrirMenu() {
-    const nav = document.querySelector('#nav')
-    const closeMenu = document.querySelector('#closeMenu')
-    const openMenu = document.querySelector('#openMenu')
-    const menu = document.querySelector('#menu')
-    const menuDiv = document.querySelector('#menuDiv')
-    const a = document.querySelectorAll('ul li a')
-
-    if (menuFechado) {
-      nav.classList.remove('hidden')
-      closeMenu.classList.remove('hidden')
-      closeMenu.classList.add('flex')
-      openMenu.classList.add('hidden')
-      menuFechado = false
-      menu.setAttribute('aria-label', 'Fechar menu de Navegação')
-      a.forEach((element) => {
-        element.addEventListener('click', () => {
-          nav.classList.add('hidden')
-          closeMenu.classList.add('hidden')
-          openMenu.classList.remove('hidden')
-          menuFechado = true
-          menu.setAttribute('aria-label', 'Abrir menu de Navegação')
-          menuDiv.classList.add('bg-[#59168B]')
-        }
-        )
-      })
-    } else {
-      nav.classList.add('hidden')
-      closeMenu.classList.add('hidden')
-      openMenu.classList.remove('hidden')
-      menuFechado = true
-      menu.setAttribute('aria-label', 'Abrir menu de Navegação')
-      menuDiv.classList.add('bg-[#59168B]')
-    }
-  }
-
-  useEffect(() => {
-    fetch('https://api.github.com/users/HellenCristinaP')
-      .then((res) => res.json())
-      .then((data) => {
-        const img = document.querySelector('#imgG')
-        img.src = data.avatar_url
-        img.alt = `Foto de ${name}`
-      })
-      .catch((error) => {
-        console.error('Erro ao buscar dados do GitHub:', error)
-      });
-  }, []);
+  const softSkills = [
+    "Comunicação",
+    "Trabalho em equipe",
+    "Resolução de problemas",
+    "Empatia",
+    "Organização"
+  ];
 
   return (
     <div className="mx-auto">
-      <div className="fixed md:static">
-        <div className="fixed md:hidden w-full bg-[#59168B] justify-end flex" id='menuDiv'>
-          <button type="checkbox" onClick={abrirMenu} aria-label='Abrir menu de Navegação' id='menu'>
-            <span
-              className="w-10 h-12 cursor-pointer flex flex-col items-center justify-center mx-4 my-2.5" id="openMenu">
-              <span
-                className="w-[80%] h-[2px] bg-white rounded-sm transition-all duration-300 origin-left translate-y-[0.75rem]"></span>
-              <span
-                className="w-[60%] h-[2px] bg-white rounded-md transition-all duration-300 origin-center"
-              ></span>
-              <span
-                className="w-[80%] h-[2px] bg-white rounded-md transition-all duration-300 origin-left -translate-y-[0.75rem]"
-              ></span>
-            </span>
-
-            <span
-              className="w-9 h-10 cursor-pointer flex-col items-center justify-center hidden m-3" id="closeMenu">
-              <span
-                className="w-[80%] h-[2px] bg-white rounded-sm transition-all duration-300 origin-left translate-y-[0.75rem] rotate-[-45deg]"
-              ></span>
-              <span
-                className="w-[80%] h-[2px] bg-white rounded-md transition-all duration-300 origin-left -translate-y-[0.65rem] rotate-[45deg]"
-              ></span>
-            </span>
-
-          </button>
-        </div>
-        <nav className="bg-purple-900 size-svh px-7 py-15 hidden md:block md:justify-items-center md:border-b-1 border-amber-400 md:p-2 md:w-full md:h-fit md:bg-purple-800" id='nav'>
-          <ul className="flex flex-col capitalize justify-between text-[#f1f1f1]/50 font-semibold text-2xl mx-2 gap-20 md:flex-row">
-            <li><a href="#home" className="hover:text-[#f1f1f1]">Home</a></li>
-            <li><a href="#habilidades" className="hover:text-[#f1f1f1]">Habilidades</a></li>
-            <li><a href="#projetos" className="hover:text-[#f1f1f1]">Projetos</a></li>
-            <li><a href="#redessociais" className="hover:text-[#f1f1f1]">Redes Sociais</a></li>
-          </ul>
-        </nav>
+      <div className="fixed w-full z-10">
+        <Menu />
       </div>
-      <header className="bg-gradient-to-t to-65% to-purple-800 px-8 pt-25.5 lg:px-40" id='home'>
-        <img src="https://avatars.githubusercontent.com/u/76890061?v=4" alt="Foto minha | uma garota branca que usa óculos e tem com cabelos longos e pretos" className="block float-right rounded-full h-25 sm:h-30 lg:h-45" id='imgG' />
+      <header className="bg-radial-[circle_at_100%] from-white to-violet-950 to-55% md:h-[50vh] py-25 px-5 md:px-20 md:py-20" id='home'>
+        <img src="https://avatars.githubusercontent.com/u/76890061?v=4" alt="Foto minha | uma garota branca que usa óculos e tem com cabelos longos e pretos" className="block float-right rounded-full h-35 sm:h-30 lg:h-45" />
 
-        <h1 className="text-5xl font-extrabold">{name}</h1>
-        <h2 className="mt-1 mb-5 font-semibold">Desenvolvedora Front-end</h2>
-        <p>Olá, meu nome é Hellen Cristina, sou Estudante de Análise e Desenvolvimento de Sistemas e estou estudando {objective} na EBAC. <br />
+        <h1 className="text-white text-5xl font-extrabold ">{name}</h1>
+        <h2 className="text-3xl mt-1 mb-2 font-bold">Desenvolvedora Front-end</h2>
+        <p className="font-semibold">Olá, meu nome é Hellen Cristina, sou Estudante de Análise e Desenvolvimento de Sistemas e estou estudando na EBAC. <br />
           Amo ver meu código se transformar em um site moderno
         </p>
-        <main>
-          <section className="mx-3 my-5 p-5 border-2 border-white rounded-2xl">
-            <h2>Formação Acadêmica</h2>
-            {/* <h3 className="text-2xl lg:text-3xl">{subjects}</h3>
-            <p>Estou cursando {subjects}, na {colegy} - {semestre} semestre</p> */}
-            {formacoes.map((formacao) => 
-      (<section class="formacao">
-       <h3 class="lugarDaFormacao">{formacao.lugarDaFormacao}</h3>
-        <p class="curso">{formacao.curso} - {formacao.data}</p>
-      </section>))}
-          </section>
-          <Propriedades />
-        </main>
       </header>
+      <main>
+        <section className="mx-3 my-5 p-5 border-2 border-violet-950 rounded-2xl">
+          <h2>Formação Acadêmica</h2>
+          {formacoes.map((formacao) =>
+          (<section className="formacao">
+            <h3 className="lugarDaFormacao">{formacao.lugarDaFormacao}</h3>
+            <p className="curso">{formacao.curso} - {formacao.data}</p>
+          </section>))}
+        </section>
+        <Propriedades />
+      </main>
       <main className="px-8 pt-15 lg:px-40">
         <h2 id='habilidades'>Habilidades</h2>
         <ul className="flex flex-wrap justify-center gap-5 py-5">
